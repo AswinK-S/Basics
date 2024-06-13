@@ -83,28 +83,106 @@
 
 //-------------------------------------------------nested callback
 
-let a=9
-let b=8
+// let a=9
+// let b=8
 
-function sum(callback){
-   return callback(a,b)
+// function sum(callback){
+//    return callback(a,b)
+
+// }
+
+// function findSum(a,b){
+//     return  a+b
+// }
+
+// function mult(callback){
+//     const result = sum(findSum)
+//     return callback(result)
+// }
+
+// function div(){
+//     const result = mult((result)=>{
+//         return result * 3
+//     })
+//     console.log(result/2);
+// }
+
+// div()
+// ------------------------------------------------------
+// const a = 9
+// const b = 8
+
+// function sum(a,b) {
+//     return a + b
+// }
+
+// function findSum(callback) {
+//     setTimeout(() => {
+//         const result= sum(a, b)
+//         console.log('sum---',result);
+//         return callback(result)
+//     }, 2000)
+// }
+
+// function mult(callback) {
+//     findSum((result) => {
+//         setTimeout(() => {
+//             const multRslt = result * 3
+//             console.log('mult result--',multRslt);
+//             callback(multRslt)
+//         }, 2000)
+//     })
+// }
+
+// function div() {
+//       mult((multRslt) => {
+//         const divRslt = multRslt/2
+//         console.log('div rstlt--',divRslt);
+//     })
+
+// }
+
+// div()
+
+// ---------------------------------------------------------------nested asynchronous callback 
+
+let week=26
+function one(){
+    console.log(`Boarding week 1 ${week}`)
+}
+
+function two(callback){
+    setTimeout(()=>{
+        one()
+        callback()
+    },1000)
+}
+
+function three(callback){
+    two(()=>{
+        setTimeout(()=>{
+            console.log(`Boarding week 2  ${week+1}`);
+            callback()
+        },1000)
+    })
+}
+
+function four(callback){
+        three(()=>{
+            setTimeout(()=>{
+            console.log(`Toi week ${week+2}`);
+            callback()
+            },1000)
+        })
    
 }
 
-function findSum(a,b){
-    return  a+b
-}
-
-function mult(callback){
-    const result = sum(findSum)
-    return callback(result)
-}
-
-function div(){
-    const result = mult((result)=>{
-        return result * 3
+function five(){
+    four(()=>{
+        setTimeout(()=>{
+            console.log('JOB')
+        },1000)
     })
-    console.log(result/2);
 }
 
-div()
+five()
