@@ -61,3 +61,27 @@
 // }
 
 // second(array)
+
+//---------------------------------------------find the longest string in the array
+
+// const strings = ["short", "medium", "a very long string", "longer"];
+// let length=0
+// // for(let i=0;i<strings.length;i++){
+// //     if(strings[i].length>length){
+// //         length=strings[i].length
+// //     }
+// // }
+// // console.log('longest--'.length);
+
+// ----------------------------------------- using map find the longest string and its length
+
+const strings = ["short", "medium", "a very long string", "longer"];
+
+let length =0
+const result=strings.map((item)=>{
+    if(item.trim().length>length){
+       return length=item.trim().length
+    }
+})
+console.log(result);
+
