@@ -27,7 +27,7 @@
 // unique(array,array1)
 
 // =================================================================reverse string inplace using recursion
-const str='ASWIN KS'
+// const str='ASWIN KS'
 
 //=====================================================reverse stack using recursion
 
@@ -72,23 +72,85 @@ const str='ASWIN KS'
 //  binary(array,target)
 
 //============================================================recursive binary search
-function recursiveBinarySearch(array,t){
+// function recursiveBinarySearch(array,t){
 
-    console.log('called');
-    let mid =Math.floor(array.length/2)
-    if(array.length===1 && t!==array[0]){
-        return false
-    }
-    else if(t===array[mid]){
-        return true
-    }else if(t<array[mid]){
-        return recursiveBinarySearch(array.slice(0,mid),t)
-    }else{
-        return recursiveBinarySearch(array.slice(mid+1),t)
-    }
-}
+//     console.log('called');
+//     let mid =Math.floor(array.length/2)
+//     if(array.length===1 && t!==array[0]){
+//         return false
+//     }
+//     else if(t===array[mid]){
+//         return true
+//     }else if(t<array[mid]){
+//         return recursiveBinarySearch(array.slice(0,mid),t)
+//     }else{
+//         return recursiveBinarySearch(array.slice(mid+1),t)
+//     }
+// }
 
- const array =[1,2,3,4,5,7,8,9]
- const target = 6
+//  const array =[1,2,3,4,5,7,8,9]
+//  const target = 6
 
-console.log(recursiveBinarySearch(array,target)); 
+// console.log(recursiveBinarySearch(array,target)); 
+
+//-------------------------------------------------typed arrays
+    // These are array-like objects that allow developers to directly manipulate binary data in memory buffer. It will be useful while dealing
+    // with platform featuers such as audios and videos manipulation, access to raw data using websockets and so on.
+
+// const array =new Int16Array(4)
+// console.log(array.length);
+
+//---------------------------------------eval()
+//  its a global function that execute the  javascript code  mentioned in string  according to the current execution enviornment
+
+// const result = '6+3'
+// console.log( eval(result));
+// console.log( typeof eval(result));
+// console.log( result);
+
+//-----------------------------function call using eval()
+
+// function sum (a,b){
+//     return a+b
+// }
+
+// const result = "sum(20,5)"
+// console.log(result);
+// console.log(eval(result));
+
+//--------------------------------labels 
+//  it is a technique in js to name a loop or block of code.  its defined using writing an identifier followed by colon `:`.
+
+// outerloop:for(let i=0;i<4;i++){
+//     for(let j=0;j<4;j++){
+
+//         if(i==1 && j==1){
+//             continue outerloop;
+//         }
+//         console.log(`i =${i} , j= ${j}`);
+//     }
+// }
+
+
+// outerLoop:for(let i=0;i<3;i++){
+//     for(let j=0;j<3;j++){
+//         if(i==1 && j==1){
+//             break outerLoop;
+//         }
+//         console.log(`i= ${i}, j= $${j}`);
+//     }
+// }
+
+//-------------------------------------------------JIt - just in time compilation
+
+
+
+
+// function add(n){
+//     console.log(`${n} = ,${n+n}`);
+// }
+// console.time();
+// for(let i=0;i<100;i++){
+//     add(i)
+// }
+// console.timeEnd();
