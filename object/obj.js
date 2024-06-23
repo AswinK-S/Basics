@@ -146,16 +146,42 @@
 
 //-----------------------------------------------------convert object to map
 
-let obj={
-    name:"Aswin",
-    place:'Kannur',
-    hobby:['movies','travel'],
-    language:{
-        native:'Malayalam',
-        second:'English',
-        third:'Hindi'
-    }
-}
+// let obj={
+//     name:"Aswin",
+//     place:'Kannur',
+//     hobby:['movies','travel'],
+//     language:{
+//         native:'Malayalam',
+//         second:'English',
+//         third:'Hindi'
+//     }
+// }
 
-let map= new Map(Object.entries(obj))
-console.log(map)
+// let map= new Map(Object.entries(obj))
+// console.log(map)
+
+//--------------------------------------find number with minimum occurrence using hash table
+
+// function minCount(array){
+//     let obj={}
+
+//     for(const num of array){
+//         if(obj[num]){
+//             obj[num]++
+//         }else{
+//             obj[num]=1
+//         }
+//     }
+
+//     let minC= Infinity
+//     let minimum = null
+//     for(const [key,value] of Object.entries(obj)){
+//         if(value<minC){
+//             minC=value
+//             minimum=key
+//         }
+//     }
+//     console.log(` count of ${minimum} is ${minC}`)
+// }
+// const array = [3, 1, 4, 1, 2, 2, 3, 5, 1, 3, 4, 5, 5];
+// minCount(array)

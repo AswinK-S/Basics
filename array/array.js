@@ -75,13 +75,67 @@
 
 // ----------------------------------------- using map find the longest string and its length
 
-const strings = ["short", "medium", "a very long string", "longer"];
+// const strings = ["short", "medium", "a very long string", "longer"];
 
-let length =0
-const result=strings.map((item)=>{
-    if(item.trim().length>length){
-       return length=item.trim().length
-    }
-})
-console.log(result);
+// let length =0
+// const result=strings.map((item)=>{
+//     if(item.trim().length>length){
+//        return length=item.trim().length
+//     }
+// })
+// console.log(result);
+
+// -------------------------------sort the array using selection sort 
+// const subjects = [
+//     { name: 'Math', score: 85 },
+//     { name: 'Science', score: 92 },
+//     { name: 'English', score: 78 },
+//     { name: 'History', score: 88 },
+//     { name: 'Art', score: 95 },
+//     { name: 'Physical Education', score: 67 },
+//     { name: 'Music', score: 73 }
+// ];
+
+//---------------------------------------------------remove only the adjacent even numbers
+
+// const array = [2,3,4,6,7,5,7,8,1]
+// function removeEven(array){
+//     let arr=[]
+//     let i=0
+//     while(i< array.length){
+//         if(array[i]%2===0 && array[i+1]%2 === 0){
+//             while(i<array.length && array[i]%2==0){
+//                 i++
+//             }
+//         }else{
+//             arr.push(array[i])
+//             i++
+//         }
+//     }
+//     console.log('array after removing the adjacent even numbers',arr)
+// }
+
+// removeEven(array)
+
+//------------------------------------- remove only the adjacent odd numbers form the given array
+// const  array=[7, 5, 3, 2, 8, 1, 9]
+// function removeOdd(array){
+//     let arr=[]
+//     let i=0
+//     while(i<array.length){
+//         if(array[i]%2!==0 && array[i+1]%2 !==0 ){
+//             while(i<array.length && array[i]%2 !==0){
+//                 i++
+//             }
+//         }else{
+//             arr.push(array[i])
+//             i++
+//         }
+//     }
+
+//     console.log('array after removing the adjacent odd numbers from the given array',)
+//     console.log(arr);
+// }
+
+//  removeOdd(array)
 

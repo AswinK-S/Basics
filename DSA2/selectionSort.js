@@ -1,4 +1,4 @@
-const array = [5,56,8,-8,9,6,]
+const array = [5,56,8,-8,9,6,-1]
 
 function swap(array,i,j){
     let temp =array[i]
