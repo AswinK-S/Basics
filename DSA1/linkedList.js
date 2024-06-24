@@ -315,14 +315,14 @@
 
 //     display() {
 //         let arr = []
-      
+
 //             let curr = this.head
 //             while (curr) {
 //                 arr.push(curr.value)
 //                 curr = curr.next
 //             }
 
-        
+
 //         return arr
 //     }
 
@@ -388,100 +388,100 @@
 
 //---------------------------------remove even numbers from a linked list
 
-class Node{
-    constructor(value){
+class Node {
+    constructor(value) {
         this.value = value
-        this.next =null
+        this.next = null
     }
 }
 
-class LinkedList{
-    constructor(){
-        this.head=null
-        this.size=0
+class LinkedList {
+    constructor() {
+        this.head = null
+        this.size = 0
     }
-    isEmpty(){
-        if(this.size===0){
+    isEmpty() {
+        if (this.size === 0) {
             return true
-        }else{
+        } else {
             return false
         }
     }
 
-    append(value){
-        let newNode =new Node(value)
-        if(this.isEmpty()){
-            this.head=newNode
-        }else{
-            let curr=this.head
-            while(curr.next!==null){
-                curr=curr.next
+    append(value) {
+        let newNode = new Node(value)
+        if (this.isEmpty()) {
+            this.head = newNode
+        } else {
+            let curr = this.head
+            while (curr.next !== null) {
+                curr = curr.next
             }
-            curr.next=newNode
+            curr.next = newNode
         }
         this.size++
 
     }
 
-    removeOdd(){
-        if(this.isEmpty()){
+    removeOdd() {
+        if (this.isEmpty()) {
             console.log('empty list')
             return
         }
 
-        while (this.head!==null && this.head.value%2!==0){
-            this.head=this.head.next
-            this.size--
-        }
-
-        let curr=this.head
-        let prev= null
-        while(curr!==null){
-            if(curr.value%2!==0){
-                prev.next=curr.next
-                this.size--
-            }else{
-                prev=curr
-            }
-            curr=curr.next
-        }
-    }
-    
-    removeEven(){
-        if(this.isEmpty()){
-            console.log('empty list')
-            return
-        }
-
-        while(this.head !==null&& this.head.value%2 ===0){
+        while (this.head !== null && this.head.value % 2 !== 0) {
             this.head = this.head.next
             this.size--
         }
 
-        let curr=this.head
+        let curr = this.head
         let prev = null
-    while(curr!==null){
-        if(curr.value%2===0){
-            prev.next = curr.next
+        while (curr !== null) {
+            if (curr.value % 2 !== 0) {
+                prev.next = curr.next
+                this.size--
+            } else {
+                prev = curr
+            }
+            curr = curr.next
+        }
+    }
+
+    removeEven() {
+        if (this.isEmpty()) {
+            console.log('empty list')
+            return
+        }
+
+        while (this.head !== null && this.head.value % 2 === 0) {
+            this.head = this.head.next
             this.size--
-        }else{
-            prev =curr
         }
-        curr= curr.next
-    }
-    }
-    
-    display(){
-        
-        if(this.isEmpty()){
-             console.log('empty list')
-             return
+
+        let curr = this.head
+        let prev = null
+        while (curr !== null) {
+            if (curr.value % 2 === 0) {
+                prev.next = curr.next
+                this.size--
+            } else {
+                prev = curr
+            }
+            curr = curr.next
         }
-        let arr=[]
-        let curr=this.head
-        while(curr.next!==null){
+    }
+
+    display() {
+
+        if (this.isEmpty()) {
+            console.log('empty list')
+            return
+        }
+        let arr = []
+        let curr = this.head
+        while (curr.next !== null) {
             arr.push(curr.value)
-            curr=curr.next
+            curr = curr.next
         }
         arr.push(curr.value)
         console.log(arr)

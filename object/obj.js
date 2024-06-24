@@ -185,3 +185,20 @@
 // }
 // const array = [3, 1, 4, 1, 2, 2, 3, 5, 1, 3, 4, 5, 5];
 // minCount(array)
+
+//----------------------------------remove last key-value pair from object
+// const obj = {
+//     name: "Alice",
+//     age: 30,
+//     profession: "Engineer",
+//     country: "USA"
+// };
+
+// console.log('obj before deleting last key',obj);
+
+// function deleteLastKey(obj){
+//     let keys = Object.keys(obj)
+//     let lastKey=keys[keys.length-1]
+//     delete obj[lastKey]
+//     console.log('object after deleting last key',obj);
+// }

@@ -154,3 +154,30 @@
 //     add(i)
 // }
 // console.timeEnd();
+
+//------------------------------------------------------fibonacci series under 100 using recursion
+
+function fibonacci(i){
+    if(i<=1){
+        return i
+    }
+
+    return fibonacci(i-1)+fibonacci(i-2)
+}
+
+function limit(num){
+
+    let arr=[]
+    let fibSum
+    let i=0
+    while(true){
+        fibSum= fibonacci(i)
+        if(fibSum>=num){
+            break;
+        }
+        arr.push(fibSum)
+        i++;
+    }
+    console.log(arr)
+}
+limit(100)
